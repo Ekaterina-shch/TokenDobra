@@ -1,0 +1,641 @@
+/* hero start */
+.section-hero {
+    width: 100%;
+    max-width: 1330px;
+    margin: 0 auto 40px;
+    /* padding: 0 15px; */
+}
+
+.section-hero .container {
+    background-color: #C5EC00;
+    border-radius: 20px;
+}
+
+.section-hero__wrapper {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 90px 0;
+}
+
+.top-block {
+    border-bottom: 2px solid #0C0C0C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 90px;
+    margin-bottom: 90px;
+}
+
+.hero-text {
+    flex: 0 1 60%;
+}
+
+.hero-title {
+    font-size: 55px;
+    line-height: 105.9%;
+    margin-bottom: 50px;
+}
+
+.text-italic {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.section-hero .btn {
+    width: 100%;
+    max-width: 366px;
+    margin-bottom: 16px;
+}
+
+.hero-description {
+    line-height: 24px;
+}
+
+.section-hero__img {
+    max-width: 375px;
+    height: 500px;
+}
+
+.bottom-block p {
+    font-size: 28px;
+    line-height: 36px;
+}
+
+/* hero end */
+/* gallery start */
+
+.section-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 30px;
+}
+
+.gallery-row {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.gallery-row:last-child .gallery-card {
+    margin-bottom: 0;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 310px;
+    background-color: #000;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.gallery-card {
+    color: #fff;
+    height: 442px;
+}
+
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.5);
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.card-mark {
+    position: absolute;
+    color: #fff;
+    top: 16px;
+    right: 8px;
+}
+
+.card-mark small,
+.card-autor {
+    display: block;
+    padding: 5px 11px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    border-radius: 21px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.card-mark small:first-child {
+    margin-bottom: 8px;
+}
+
+.card-mark small {
+    cursor: pointer;
+}
+
+.card-mark small:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.small-action {
+    position: relative;
+    z-index: 10;
+}
+
+
+.small-action--hover {
+    width: 378px;
+    padding: 10px 5px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    background-color: #0C0C0C;
+    color: #fff;
+    top: -80px;
+    right: -150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+    border-radius: 11px;
+    /* opacity: 0; */
+    display: none;
+    transition: all 0.2s;
+}
+
+@media screen and (min-width: 1025px) {
+
+    .card:nth-child(4) .small-action--hover,
+    .card:nth-child(8) .small-action--hover {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+
+    .card:nth-child(3) .small-action--hover,
+    .card:nth-child(6) .small-action--hover {
+        right: 0;
+    }
+}
+
+
+.small-action:hover .small-action--hover {
+    /* opacity: 1; */
+    display: block;
+}
+
+
+.card-info {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 0 20px 20px;
+    font-weight: bold;
+}
+
+.card-name {
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.progress-price {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.progress-value {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.line-progress {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.line-progress::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 8px;
+    left: 0;
+    width: 75%;
+    height: 10px;
+    background-color: #fff;
+}
+
+.card-autor {
+    display: inline-block;
+}
+
+/* gallery end */
+/* funds start */
+.section-funds {}
+
+.row {
+    display: flex;
+}
+
+.fund {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.fund-1 {
+    background-image: url("../img/fund-bg_1.png");
+    margin-bottom: 40px;
+}
+
+.fund-2 {
+    background-image: url("../img/fund-bg_2.png");
+}
+
+.fund-block {
+    display: flex;
+    flex: 0 1 16%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+.fund-block__avatar {
+    width: 112px;
+    height: 112px;
+    border: 4px solid #777777;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.fund-name {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+
+.fund-info {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.fund-disc {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.fund-disc a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.image-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1348px) {
+    .image-slider {
+        padding: 0 0 70px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 1009px) {
+    .image-slider {
+        padding: 0;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .image-slider {
+        padding: 0 0 28px;
+    }
+}
+
+
+/* скролл */
+
+.image-slider .swiper-scrollbar-drag {
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 0;
+    height: 6px;
+}
+
+.image-slider .swiper-scrollbar {
+    background-color: rgba(255, 255, 255, 0.21);
+    border-radius: 0;
+    height: 6px;
+}
+
+/* Ширина слайдов */
+.image-slider .swiper-slide {
+    width: 310px;
+}
+
+@media screen and (max-width: 425px) {
+    .image-slider .swiper-slide {
+        width: 288px;
+    }
+}
+
+.slider {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.slider__item {
+    margin: 0;
+}
+
+.slider__item:hover .card-mark {
+    opacity: 1;
+    top: 16px;
+}
+
+.slider__item:hover .card-name {
+    opacity: 1;
+    top: -35px;
+}
+
+.slider__item:hover .slider__item-img {
+    filter: brightness(0.5);
+}
+
+.slider__item .card-mark {
+    opacity: 0;
+    top: 0;
+    transition: all 0.6s;
+}
+
+.slider__item-img {
+    border-radius: 20px 20px 0 0;
+    transition: all 0.3s;
+    height: 310px;
+    object-fit: cover;
+}
+
+.slider__item-info {
+    background-color: #fff;
+    border-radius: 0 0 20px 20px;
+    padding: 12px 20px 20px;
+    position: relative;
+}
+
+.slider__item-info .card-name {
+    position: absolute;
+    transition: all 0.6s;
+    opacity: 0;
+    top: -6px;
+    color: #fff;
+}
+
+.slider__item-info .card-autor {
+    font-weight: bold;
+    color: #777777;
+    font-size: 14px;
+}
+
+.slider__item-info .line-progress {
+    background: rgba(0, 0, 0, 0.19);
+    margin-bottom: 0;
+}
+
+.slider__item-info .line-progress::after {
+    background-color: #000;
+}
+
+.slider__item-info .progress-value {
+    text-align: end;
+    font-weight: bold;
+    color: #777777;
+    font-size: 14px;
+}
+
+/* funds end */
+
+/* buy-nft start */
+
+
+.section__buy-nft .bg {
+    background-color: #FFE500;
+    border-radius: 20px;
+    padding: 94px 86px 94px 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+.buy-nft__image {
+    width: 100%;
+    max-width: 380px;
+    margin-right: 85px;
+}
+
+.buy-nft__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 105.9%;
+    color: #0C0C0C;
+    margin-bottom: 20px;
+}
+
+.buy-nft__disc {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #0C0C0C;
+}
+
+/* buy-nft end */
+
+
+@media screen and (max-width: 1024px) {
+    .section-hero {
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .section-hero .container {
+        border-radius: 0;
+    }
+
+    .section-hero__wrapper {
+        padding: 30px 0;
+    }
+
+    .top-block {
+        flex-direction: column-reverse;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    .hero-title {
+        font-size: 45px;
+    }
+
+    .main-img {
+        margin-bottom: 30px;
+    }
+
+    .section-hero .btn {
+        max-width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .gallery-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+
+    .section-funds .container {
+        padding: 0;
+    }
+
+    .section-funds .row {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .fund {
+        border-radius: 0;
+    }
+
+    .fund-disc {
+        display: none;
+    }
+
+    .fund-block {
+        margin: 0 0 30px 0;
+        padding: 30px 16px 0;
+    }
+
+    .fund-block__avatar {
+        float: left;
+        width: 58px;
+        height: 58px;
+        margin: 0 16px 0 0;
+    }
+
+    .fund-name {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .slider {
+        margin-bottom: 30px;
+        overflow: hidden;
+    }
+
+    .section__buy-nft .container {
+        padding: 0;
+    }
+
+    .section__buy-nft .bg {
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 0;
+        padding: 30px 20px;
+    }
+
+    .buy-nft__image {
+        max-width: 250px;
+        margin: 0 0 30px 0;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .gallery-row {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .small-action--hover,
+    .card:last-child .small-action--hover {
+        top: 33px;
+        right: -8px;
+        width: 310px;
+    }
+
+    .buy-nft__title {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .buy-nft__disc {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .section-hero__img {
+        max-width: 200px;
+        height: 266px;
+    }
+
+    .hero-title {
+        font-size: 26px;
+    }
+
+    /* .small-action--hover,
+    .card:last-child .small-action--hover {
+        top: 33px;
+        right: -8px;
+        width: 310px;
+    } */
+
+    .gallery-row {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .gallery-card:not(:nth-child(-n+5)) {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .slider__item-img {
+        height: 288px;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .small-action--hover {
+        width: 290px;
+    }
+}

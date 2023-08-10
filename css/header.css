@@ -1,0 +1,151 @@
+.page-body__header {
+    padding: 15px 0;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.page-body__header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logo svg {
+    width: 100%;
+    max-width: 277px;
+    height: 39px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 0 1 70%;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.nav-list__item {
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.nav-list__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.header-btn {
+    width: 100%;
+    max-width: 235px;
+}
+
+.menu-mobil {
+    width: 18px;
+    height: 13px;
+    position: relative;
+    display: none;
+}
+
+.burger {
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background-color: #000;
+}
+
+.burger:nth-child(1) {
+    top: 0;
+}
+
+.burger:nth-child(2) {
+    top: 5px;
+    right: 0;
+    width: 15px;
+}
+
+.burger:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 9px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .nav-list,
+    .nav-list__item:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .basket {
+        margin-left: 15px;
+    }
+
+    .menu-mobil {
+        display: block;
+    }
+
+    /* .nav-list, */
+    .btn.header-btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .page-body__header {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nav-list {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        background-color: #fff;
+        top: 0;
+        right: 0;
+        width: 100%;
+        margin-right: 0;
+        margin-top: 70px;
+        z-index: 0;
+        transform: translate(200%, 0%);
+        transition: all 0.5s ease 0s;
+    }
+
+    .open {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    .nav-list__item {
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .burger {
+        transition: all 0.3s ease 0s;
+    }
+
+    .close .burger:nth-child(1) {
+        top: 50%;
+        width: 25px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .close .burger:nth-child(2) {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    .close .burger:nth-child(3) {
+        bottom: 50%;
+        width: 25px;
+        transform: translate(-24%, 50%) rotate(45deg);
+    }
+}

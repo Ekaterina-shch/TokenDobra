@@ -1,0 +1,251 @@
+.modal {
+    overflow: scroll;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__wrapper {
+    background-color: #fff;
+    width: 100%;
+    max-width: 904px;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.modal__block {
+    display: flex;
+    position: relative;
+    gap: 40px;
+}
+
+.modal__btn-close {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.modal__btn-close::after,
+.modal__btn-close::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #000;
+    width: 15px;
+    height: 2px;
+}
+
+.modal__btn-close::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal__btn-close::before {
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.modal__image {
+    flex: 0 1 27%;
+    align-self: center;
+}
+
+.modal__image-1 {}
+
+.modal__image-2 {
+    display: none;
+}
+
+.modal__body {
+    align-self: center;
+    flex: 0 1 66%;
+}
+
+.modal__title {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    margin-bottom: 12px;
+}
+
+.modal__text {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    margin-bottom: 30px;
+}
+
+.modal__body-bottom {
+    display: flex;
+    gap: 8px;
+}
+
+.modal__copy-text {
+    cursor: text;
+    width: 100%;
+    max-width: 355px;
+    padding: 15px;
+    border-radius: 11px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    background: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+}
+
+.modal__copy-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 215px;
+    padding: 14px 30px;
+    border-radius: 11px;
+    border: 2px solid #0C0C0C;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+}
+
+.modal-copy {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    background-color: #0c0c0cc8;
+    color: #fff;
+    font-size: 14px;
+    line-height: 21px;
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    transform: translateY(50%);
+
+    opacity: 0;
+}
+
+.copy-show {
+    animation: copy-text 1.5s ease;
+}
+
+.open {
+    display: flex;
+}
+
+@keyframes copy-text {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(0%);
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modal {
+        align-items: flex-start;
+    }
+
+    .modal__wrapper {
+        padding: 0;
+    }
+
+    .modal__block {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .modal__btn-close {
+        right: 6px;
+        top: 6px;
+    }
+
+    .modal__btn-close::after,
+    .modal__btn-close::before {}
+
+    .modal__image {
+        margin-top: 30px;
+    }
+
+    .modal__image-1 {
+        display: none;
+    }
+
+    .modal__image-2 {
+        display: block;
+    }
+
+    .modal__body {
+        padding: 16px;
+    }
+
+
+    .modal__title {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 8px;
+    }
+
+    .modal__text {
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 16px;
+    }
+
+    .modal__body-bottom {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .modal__copy-text {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .modal__copy-btn {
+        max-width: 355px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
